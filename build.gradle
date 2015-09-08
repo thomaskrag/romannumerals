@@ -1,0 +1,23 @@
+allprojects {
+    group 'circus.praqma' // Change group do something unique for you
+    version '0.1-SNAPSHOT'
+
+
+    apply plugin: 'idea'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'maven-publish'
+
+
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    artifactoryUrl = "http://192.168.99.121/artifactory"
+    def isSnapshot = version.endsWith('SNAPSHOT')
+    luciRepositoryUrl = "${artifactoryUrl}/${isSnapshot ? 'libs-snapshot-local' : 'libs-release-local'}"
+}

@@ -1,0 +1,18 @@
+publishing {
+    publications {
+        romanLib(MavenPublication) {
+            from components.java
+        }
+
+    }
+
+    repositories {
+        maven {
+            credentials {
+                username 'admin'
+                password 'password'
+            }
+            url luciRepositoryUrl
+        }
+    }
+}

@@ -1,0 +1,11 @@
+repositories {
+    maven {
+        url luciRepositoryUrl
+    }
+}
+
+dependencies {
+    testCompile 'circus.praqma:core:0.1-SNAPSHOT'
+    testCompile 'junit:junit:4.12'
+}
+
