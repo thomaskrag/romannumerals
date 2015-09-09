@@ -1,6 +1,6 @@
 allprojects {
     // IMPORTANT: Change group do something unique for you 
-    group 'circus.praqma' 
+    group 'circus.ildiroen' 
     version '0.1-SNAPSHOT'
 
 
